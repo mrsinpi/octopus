@@ -17,14 +17,34 @@
 			height: auto;
 			border-radius: 12px;
 		}
+		button {
+			padding: 10px 20px;
+			font-size: 16px;
+			background-color: #006064;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
 		</style>
 	</head>
 	<body>
-		<h1>Octopus</h1>
+		<h1 id="main-title">Octopus</h1>
 		<h2>I'm going to share everything I can find about octopuses.</h2>
 		<p>It's going to be an interesting journey</p>
 		<a href="https://github.com">My github</a>
 		<br><br>
+		
+		<button id="buttonOne">Click for Octopus Fact!</button>
+		<script>
+			const button = document.getElementById('magic-button');
+			const title = document.getElementById('main-title');
+			button.addEventListener('click', function(){
+				title.innerText = "Octopuses have 3 hears!";
+			});
+		</script>
+		<br><br>
+		
 		<img src="https://www.montereyherald.com/wp-content/uploads/migration/2015/201506/NEWS_150619781_AR_0_XQCQHMOYMVNY.jpg" alt="A cute octopus">
 	</body>
 </html>
